@@ -25,6 +25,18 @@ class Queue:
     def remove(self):
         return self.items.pop()
 
+class RingBuffer:
+    def __init__(self, size):
+        self.data = [None for i in range(size)]
+
+    def append(self, x):
+        self.data.pop(0)
+        self.data.append(x)
+
+    def get(self):
+        return self.data
+
+
 def main():
     q = Queue()
 
@@ -44,4 +56,11 @@ def main():
     q.remove()
     q.remove()
     print(q)
+
+    print("\nRingBuffer")
+
+    buf = RingBuffer(4)
+    for i in range(10):
+        buf.append(i)
+        print(buf.get())
 main()
