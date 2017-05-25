@@ -76,8 +76,8 @@ class LinkedList(object):
                 current = current.get_next()
         return found
 
-    # Deletes all instances of give value in list
-    # TODO implement for previous pointer
+    # Deletes all instances of given value in list
+    # TODO implement  previous pointers
     def delete(self, value):
         current = self.head_
         prev = None
@@ -94,7 +94,7 @@ class LinkedList(object):
                 prev = current
                 current = current.get_next()
 
-    # Pushes an item the front of the list
+    # Pushes an item to the front of the list
     # O(1)
     def push(self, value):
         node = Node(value)
@@ -102,7 +102,7 @@ class LinkedList(object):
         self.set_head(node)
         self.count_ += 1
 
-    # Add and item at the end of the list
+    # Add an item at the end of the list
     # O(n)
     def append(self, value):
         node = Node(value)
