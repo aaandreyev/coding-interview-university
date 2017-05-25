@@ -50,5 +50,5 @@ def main():
     print("Stack size is {}".format(st.size()))
 
     print("Is Stack empty: {}".format(st.isEmpty()))
-    
+
 main()
